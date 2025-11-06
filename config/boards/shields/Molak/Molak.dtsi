@@ -19,8 +19,9 @@
         >;
     };
 
-    aliases {
-        kscan = &kscan0;
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+        label = "KSCAN";
     };
 
     right_encoder: encoder_right {
