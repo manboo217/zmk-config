@@ -11,6 +11,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 120
+#include <dt-bindings/zmk/pointing.h>
+
 &lt {
     tapping-term-ms = <240>;
     flavor = "balanced";
@@ -22,6 +25,7 @@
     flavor = "tap-preferred";
     quick-tap-ms = <150>;
 };
+
 
 / {
     keymap {
@@ -36,6 +40,7 @@
 &kp LEFT_SHIFT  &kp Z         &kp X         &kp C         &kp V   &kp B        &kp LEFT_SHIFT       &kp RIGHT_SHIFT &kp N            &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
 &kp LCTL        &kp LEFT_ALT                                      &lt 4 SPACE  &mo ENTER            &lt 4 ENTER     &kp SPACE                                    &kp BACKSLASH  &kp RIGHT_ALT
             >;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         number_layer {
@@ -46,6 +51,7 @@
 &trans  &trans    &trans    &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                                 &trans  &trans       &trans  &trans                          &trans  &trans
             >;
+            sensor-bindings = <&scroll_left_right>;
 
             label = "NUM";
         };
@@ -105,4 +111,20 @@
             >;
         };
     };
+
+  behaviors {
+    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms = <20>;
+        };
+
+    scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+            tap-ms = <20>;
+        };
+  };
 };
