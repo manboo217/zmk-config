@@ -9,7 +9,7 @@
     };
 
     physical_layout: physical_layout {
-        compatible = "zmk.physical_layout";
+        compatible = "zmk,physical-layout";
         display-name = "Default";
         transform = <&default_transform>;
         kscan = <&kscan0>;
@@ -76,7 +76,6 @@
             , <&key_physical_attrs 100 100 1400  400       0     0     0>
             ;
         };
-    }
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <14>;
