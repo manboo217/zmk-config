@@ -14,7 +14,7 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 120
 #include <dt-bindings/zmk/pointing.h>
 
-#include "keycode_japanese.h"
+#include "keycode_jp.h"
 
 &lt {
     tapping-term-ms = <240>;
