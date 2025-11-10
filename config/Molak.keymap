@@ -42,7 +42,7 @@
 &kp LALT        &kt LWIN                          &lt 4 SPACE  &lt 4 ENTER     &lt 1 ENTER      &kp SPACE                              &kp BACKSLASH  &kp RIGHT_ALT
             >;
 
-            sensor-bindings = <&scroll_up_down>, <&scroll_left_right>;
+            sensor-bindings = <&msc scroll_up_down>, <&msc scroll_left_right>;
         };
 
         number_layer {
