@@ -66,7 +66,7 @@
 &trans  &kp N1        &kp N2  &kp N3  &kp N4  &kp N5                   &trans          &trans         &kp JP_EQUAL     &kp JP_CARET        &kp JP_YEN         &trans
 &trans  &kp N6        &kp N7  &kp N8  &kp N9  &kp N0  &trans   &trans  &kp CARET       &kp AMPERSAND  &kp JP_SEMI      &kp JP_COLON        &kp JP_LBKT        &trans
 &trans  &trans        &trans  &trans  &trans  &trans  &trans   &trans  &kp JP_BSLH     &kp JP_COMMA   &kp JP_DOT       &kp SLASH           &kp JP_RBKT        &trans
-&trans  &trans                                &trans  &trans   &trans  &trans                                                              &trans             &trans
+&trans  &trans                                &trans  &trans   &trans  &trans                                                              &kp JP_AT          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
